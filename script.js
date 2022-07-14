@@ -1,18 +1,30 @@
 let button3 = document.querySelector("#button3");
+
 let link = document.querySelector("#link");
 let submitButton = document.querySelector("#buttonSub");
 let image = document.querySelector("#image");
 let divSector = document.querySelector("#div-sector");
-let button2 = document.querySelector("#button2");
-let pOne = document.querySelector("#pOne");
+let www = document.querySelectorAll(".www");
 let pTwo = document.querySelector("#pTwo");
 let pThree = document.querySelector("#pThree");
+let allP = document.querySelectorAll(".newP");
+let pOne = document.querySelector("#pOne");
+let button1 = document.querySelector("#button1");
 let elem1 = document.querySelector("#elem1");
 let elem2 = document.querySelector("#elem2");
 let elem3 = document.querySelector("#elem3");
+let allInputs = document.querySelectorAll(".inputs");
 
 //
 //************************************************************************* */
 //                              VARIABLES
 //************************************************************************* */
 //
+
+function func() {
+  this.value = Number(this.value) + 1;
+}
+
+for (let input of allInputs) {
+  input.addEventListener("blur", func);
+}

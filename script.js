@@ -1,5 +1,4 @@
 let button3 = document.querySelector("#button3");
-
 let link = document.querySelector("#link");
 let submitButton = document.querySelector("#buttonSub");
 let image = document.querySelector("#image");
@@ -20,11 +19,3 @@ let allInputs = document.querySelectorAll(".inputs");
 //                              VARIABLES
 //************************************************************************* */
 //
-
-function func() {
-  this.value = Number(this.value) + 1;
-}
-
-for (let input of allInputs) {
-  input.addEventListener("blur", func);
-}

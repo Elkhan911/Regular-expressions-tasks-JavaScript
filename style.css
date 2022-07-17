@@ -1,4 +1,22 @@
-div {
-  margin-top: 40px;
+.perechernut {
+  text-decoration: line-through;
+}
+
+.sdelatKrasnim {
+  background-color: red;
+}
+
+.jirnyText {
+  font-weight: 900;
+}
+
+.nonactive {
+  display: none;
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+
+.active {
   display: block;
 }

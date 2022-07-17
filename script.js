@@ -6,7 +6,6 @@ let divSector = document.querySelector("#div-sector");
 let www = document.querySelectorAll(".www");
 let pTwo = document.querySelector("#pTwo");
 let pThree = document.querySelector("#pThree");
-let allP = document.querySelectorAll(".newP");
 let pOne = document.querySelector("#pOne");
 let button1 = document.querySelector("#button1");
 let elem1 = document.querySelector("#elem1");
@@ -19,3 +18,14 @@ let allInputs = document.querySelectorAll(".inputs");
 //                              VARIABLES
 //************************************************************************* */
 //
+
+let allP = document.querySelectorAll(".newP");
+
+function addExclaimPoint() {
+  console.log(this);
+  //   this.innerHTML = this.innerHTML + "!";
+}
+
+for (let elem of allInputs) {
+  elem.addEventListener("click", addExclaimPoint);
+}

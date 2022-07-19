@@ -27,11 +27,9 @@ elem1.addEventListener("blur", func);
 
 function func() {
   let str = elem1.value;
-  if (str.includes("3")) {
-    console.log(true);
-    return;
-  } else {
-    console.log(false);
-    return;
+
+  if (str.includes(3)) {
+    return true;
   }
+  return false;
 }

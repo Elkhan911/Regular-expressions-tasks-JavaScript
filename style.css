@@ -1,8 +1,24 @@
-a {
-  color: blue;
-  text-decoration: none;
+.parent {
+  width: 1280px;
+  border: 1px solid green;
+  margin: auto;
 }
 
-a:hover {
-  border-style: dotted;
+.child1 {
+  border: 1px solid red;
+  height: 100px;
+  width: 200px;
+  margin: 10px auto;
+}
+.child2 {
+  border: 1px solid red;
+  height: 100px;
+  width: 400px;
+  margin: 10px auto;
+}
+.child3 {
+  border: 1px solid red;
+  height: 100px;
+  width: 800px;
+  margin: 10px auto;
 }

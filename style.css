@@ -1,24 +1,9 @@
 .parent {
-  width: 1280px;
+  display: flex;
+  border: 1px solid red;
+}
+.child {
+  width: 50px;
+  height: 70px;
   border: 1px solid green;
-  margin: auto;
-}
-
-.child1 {
-  border: 1px solid red;
-  height: 100px;
-  width: 200px;
-  margin: 10px auto;
-}
-.child2 {
-  border: 1px solid red;
-  height: 100px;
-  width: 400px;
-  margin: 10px auto;
-}
-.child3 {
-  border: 1px solid red;
-  height: 100px;
-  width: 800px;
-  margin: 10px auto;
 }

@@ -30,12 +30,4 @@ let radios = document.querySelectorAll(".radiocl");
 //************************************************************************* */
 //
 
-button1.addEventListener("click", func);
-
-function func() {
-  for (let link of allLinks) {
-    if (link.href.startsWith("http://")) {
-      link.innerHTML = link.innerHTML + "&rarr;";
-    }
-  }
-}
+elem1.addEventListener("blur", func);

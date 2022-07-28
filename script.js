@@ -23,6 +23,7 @@ let divs = document.querySelectorAll(".divs");
 let checkbox = document.querySelector("#checkbox");
 let textarea = document.querySelector("#textarea");
 let radios = document.querySelectorAll(".radiocl");
+let select = document.querySelector("#select");
 
 //
 //************************************************************************* */
@@ -30,4 +31,11 @@ let radios = document.querySelectorAll(".radiocl");
 //************************************************************************* */
 //
 
-elem1.addEventListener("blur", func);
+select.addEventListener("change", function () {
+  console.log(select.value);
+  if (select.value < 5) {
+    console.log("Сегодня рабочий день");
+  } else {
+    console.log("Сегодня выходной день");
+  }
+});

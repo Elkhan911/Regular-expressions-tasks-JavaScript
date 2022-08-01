@@ -24,6 +24,7 @@ let checkbox = document.querySelector("#checkbox");
 let textarea = document.querySelector("#textarea");
 let radios = document.querySelectorAll(".radiocl");
 let select = document.querySelector("#select");
+let serebroDiv = document.querySelector("#serebro");
 
 //
 //************************************************************************* */
@@ -31,11 +32,6 @@ let select = document.querySelector("#select");
 //************************************************************************* */
 //
 
-select.addEventListener("change", function () {
-  console.log(select.value);
-  if (select.value < 5) {
-    console.log("Сегодня рабочий день");
-  } else {
-    console.log("Сегодня выходной день");
-  }
+document.addEventListener("mousemove", function (event) {
+  serebroDiv.innerHTML = event.pageX + " : " + event.pageY;
 });

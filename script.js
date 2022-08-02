@@ -31,3 +31,16 @@ let serebroDiv = document.querySelector("#serebro");
 //                              VARIABLES
 //************************************************************************* */
 //
+
+let arr = ["red", "green", "blue"];
+
+function func() {
+  for (let i = 0; i < arr.length; i++) {
+    pOne.style.color = arr[i];
+    if (i <= arr.length) {
+      i = 0;
+    }
+  }
+}
+
+setInterval(func, 1000);

@@ -18,7 +18,7 @@ let button2 = document.querySelector("#button2");
 let button3 = document.querySelector("#button3");
 let divParent = document.querySelector(".parent");
 let pOne = document.querySelector("#pOne");
-let parent = document.querySelector("#parent");
+let parents = document.querySelector("#parent");
 let divs = document.querySelectorAll(".divs");
 let checkbox = document.querySelector("#checkbox");
 let textarea = document.querySelector("#textarea");
@@ -31,7 +31,3 @@ let serebroDiv = document.querySelector("#serebro");
 //                              VARIABLES
 //************************************************************************* */
 //
-
-document.addEventListener("mousemove", function (event) {
-  serebroDiv.innerHTML = event.pageX + " : " + event.pageY;
-});

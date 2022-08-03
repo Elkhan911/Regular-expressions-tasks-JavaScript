@@ -26,6 +26,9 @@ let radios = document.querySelectorAll(".radiocl");
 let select = document.querySelector("#select");
 let serebroDiv = document.querySelector("#serebro");
 let ParentNew = document.querySelector("#parents");
+let ChildNew = ParentNew.querySelector(".child");
+let allPsNew = document.querySelectorAll(".www");
+let yesbatya = document.querySelector(".yesBatya");
 
 //
 //************************************************************************* */
@@ -33,12 +36,18 @@ let ParentNew = document.querySelector("#parents");
 //************************************************************************* */
 //
 
-button1.addEventListener("click", func);
+let arr = [11, 22, 33, 44, 55];
 
-function func() {
-  for (let i = 1; i < 10; i++) {
-    let li = document.createElement("li");
-    li.innerHTML = "item" + " " + i;
-    ParentNew.appendChild(li);
-  }
+for (let i = 0; i < arr.length; i++) {
+  let li = document.createElement("li");
+  li.textContent = arr[i];
+
+  ParentNew.append(li);
+
+  li.addEventListener("click", func1);
+}
+
+function func1() {
+  this.textContent = this.textContent + "!";
+  this.removeEventListener("click", func1);
 }

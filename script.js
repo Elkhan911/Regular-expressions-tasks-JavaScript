@@ -25,7 +25,7 @@ let textarea = document.querySelector("#textarea");
 let radios = document.querySelectorAll(".radiocl");
 let select = document.querySelector("#select");
 let serebroDiv = document.querySelector("#serebro");
-
+let ParentNew = document.querySelector("#parents");
 
 //
 //************************************************************************* */
@@ -33,3 +33,12 @@ let serebroDiv = document.querySelector("#serebro");
 //************************************************************************* */
 //
 
+button1.addEventListener("click", func);
+
+function func() {
+  for (let i = 1; i < 10; i++) {
+    let li = document.createElement("li");
+    li.innerHTML = "item" + " " + i;
+    ParentNew.appendChild(li);
+  }
+}

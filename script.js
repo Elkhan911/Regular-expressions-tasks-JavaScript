@@ -29,6 +29,7 @@ let ParentNew = document.querySelector("#parents");
 let ChildNew = ParentNew.querySelector(".child");
 let allPsNew = document.querySelectorAll(".www");
 let yesbatya = document.querySelector(".yesBatya");
+let table = document.querySelector("#table");
 
 //
 //************************************************************************* */
@@ -36,18 +37,22 @@ let yesbatya = document.querySelector(".yesBatya");
 //************************************************************************* */
 //
 
-let arr = [11, 22, 33, 44, 55];
+let employees = [
+  { name: "employee1", age: 30, salary: 400 },
+  { name: "employee2", age: 31, salary: 500 },
+  { name: "employee3", age: 32, salary: 600 },
+];
 
-for (let i = 0; i < arr.length; i++) {
-  let li = document.createElement("li");
-  li.textContent = arr[i];
 
-  ParentNew.append(li);
+for (let employee of employees) {
+  console.log(employee);
 
-  li.addEventListener("click", func1);
-}
+  let tr = document.createElement("tr");
+  console.log(tr);
+  console.log(table);
+  table.append(tr);
 
-function func1() {
-  this.textContent = this.textContent + "!";
-  this.removeEventListener("click", func1);
+  let td = document.createElement("td");
+  console.log(td);
+  tr.append(td);
 }

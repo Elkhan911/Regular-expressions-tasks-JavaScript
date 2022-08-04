@@ -6,3 +6,17 @@ ol {
   margin: 60px;
   font-size: 20px;
 }
+
+tr {
+  margin: 10px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+td {
+  margin: 10px;
+  border: 1px solid blue;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}

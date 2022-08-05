@@ -37,22 +37,30 @@ let table = document.querySelector("#table");
 //************************************************************************* */
 //
 
-let employees = [
-  { name: "employee1", age: 30, salary: 400 },
-  { name: "employee2", age: 31, salary: 500 },
-  { name: "employee3", age: 32, salary: 600 },
-];
+let i = 1;
 
-
-for (let employee of employees) {
-  console.log(employee);
-
-  let tr = document.createElement("tr");
-  console.log(tr);
-  console.log(table);
-  table.append(tr);
-
-  let td = document.createElement("td");
-  console.log(td);
-  tr.append(td);
+for (i = 1; i <= 4; i++) {
+  let li = document.createElement("li");
+  ParentNew.append(li);
+  li.textContent = i;
+  li.style.border = "1px solid blue";
 }
+
+button1.addEventListener("click", func1);
+
+function func1() {
+  let linew = document.createElement("li");
+  ParentNew.append(linew);
+  i++;
+  linew.textContent = i - 1;
+}
+
+let lis = document.querySelectorAll("#parents li");
+
+ParentNew.addEventListener("click", function (event) {
+  console.log(event.target);
+
+  if (event.target == "li") {
+    this.remove();
+  }
+});

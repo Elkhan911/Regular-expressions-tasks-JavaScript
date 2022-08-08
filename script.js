@@ -25,9 +25,42 @@ let textarea = document.querySelector("#textarea");
 let radios = document.querySelectorAll(".radiocl");
 let select = document.querySelector("#select");
 let serebroDiv = document.querySelector("#serebro");
+let ParentNew = document.querySelector("#parents");
+let ChildNew = ParentNew.querySelector(".child");
+let allPsNew = document.querySelectorAll(".www");
+let yesbatya = document.querySelector(".yesBatya");
+let table = document.querySelector("#table");
 
 //
 //************************************************************************* */
 //                              VARIABLES
 //************************************************************************* */
 //
+
+let i = 1;
+
+for (i = 1; i <= 4; i++) {
+  let li = document.createElement("li");
+  ParentNew.append(li);
+  li.textContent = i;
+  li.style.border = "1px solid blue";
+}
+
+button1.addEventListener("click", func1);
+
+function func1() {
+  let linew = document.createElement("li");
+  ParentNew.append(linew);
+  i++;
+  linew.textContent = i - 1;
+}
+
+let lis = document.querySelectorAll("#parents li");
+
+ParentNew.addEventListener("click", function (event) {
+  console.log(event.target);
+
+  if (event.target == "li") {
+    this.remove();
+  }
+});

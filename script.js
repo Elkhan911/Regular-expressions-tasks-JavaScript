@@ -30,6 +30,8 @@ let ChildNew = ParentNew.querySelector(".child");
 let allPsNew = document.querySelectorAll(".www");
 let yesbatya = document.querySelector(".yesBatya");
 let table = document.querySelector("#table");
+let allgogoLi = document.querySelectorAll(".gogoLi");
+let allspanP = document.querySelectorAll(".spanP");
 
 //
 //************************************************************************* */
@@ -37,30 +39,9 @@ let table = document.querySelector("#table");
 //************************************************************************* */
 //
 
-let i = 1;
+for (let spanP of allspanP) {
+  let a = document.createElement("a");
 
-for (i = 1; i <= 4; i++) {
-  let li = document.createElement("li");
-  ParentNew.append(li);
-  li.textContent = i;
-  li.style.border = "1px solid blue";
+  a.textContent = " remove " + spanP.textContent;
+  ParentNew.append(a);
 }
-
-button1.addEventListener("click", func1);
-
-function func1() {
-  let linew = document.createElement("li");
-  ParentNew.append(linew);
-  i++;
-  linew.textContent = i - 1;
-}
-
-let lis = document.querySelectorAll("#parents li");
-
-ParentNew.addEventListener("click", function (event) {
-  console.log(event.target);
-
-  if (event.target == "li") {
-    this.remove();
-  }
-});

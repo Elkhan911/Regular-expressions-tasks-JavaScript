@@ -20,3 +20,29 @@ td {
   height: 50px;
   text-align: center;
 }
+
+.hideOn {
+  display: none;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.color1 {
+  background: red;
+}
+.color2 {
+  background: green;
+}
+.color3 {
+  background: yellow;
+}

@@ -31,7 +31,7 @@ let allPsNew = document.querySelectorAll(".www");
 let yesbatya = document.querySelector(".yesBatya");
 let table = document.querySelector("#table");
 let allgogoLi = document.querySelectorAll(".gogoLi");
-let allspanP = document.querySelectorAll(".spanP");
+let allNewPP = document.querySelectorAll(".newPP");
 
 //
 //************************************************************************* */
@@ -39,9 +39,3 @@ let allspanP = document.querySelectorAll(".spanP");
 //************************************************************************* */
 //
 
-for (let spanP of allspanP) {
-  let a = document.createElement("a");
-
-  a.textContent = " remove " + spanP.textContent;
-  ParentNew.append(a);
-}

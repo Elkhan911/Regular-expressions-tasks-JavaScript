@@ -26,11 +26,11 @@ let radios = document.querySelectorAll(".radiocl");
 let select = document.querySelector("#select");
 let serebroDiv = document.querySelector("#serebro");
 let ParentNew = document.querySelector("#parents");
-let ChildNew = ParentNew.querySelector(".child");
 let allPsNew = document.querySelectorAll(".www");
 let yesbatya = document.querySelector(".yesBatya");
 let table = document.querySelector("#table");
 let allgogoLi = document.querySelectorAll(".gogoLi");
+
 let allNewPP = document.querySelectorAll(".newPP");
 
 //
@@ -39,3 +39,10 @@ let allNewPP = document.querySelectorAll(".newPP");
 //************************************************************************* */
 //
 
+function appendElem(obj, text) {
+  let li = document.createElement("li");
+  li.textContent = text;
+  obj.append(li);
+}
+
+appendElem(ParentNew, "текст для всех");

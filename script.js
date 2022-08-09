@@ -39,10 +39,21 @@ let allNewPP = document.querySelectorAll(".newPP");
 //************************************************************************* */
 //
 
-function appendElem(obj, text) {
-  let li = document.createElement("li");
-  li.textContent = text;
-  obj.append(li);
+function forEach(selector, newFunc) {
+  let elems = document.querySelectorAll(selector);
+
+  for (let elem of elems) {
+    newFunc(elem);
+  }
 }
 
-appendElem(ParentNew, "текст для всех");
+let i = 0;
+
+function func(item) {
+  i++;
+  item.textContent = i + " " + item.textContent;
+}
+
+forEach(".newPP", func);
+
+

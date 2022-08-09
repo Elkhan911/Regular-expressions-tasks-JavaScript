@@ -39,21 +39,11 @@ let allNewPP = document.querySelectorAll(".newPP");
 //************************************************************************* */
 //
 
-function forEach(selector, newFunc) {
-  let elems = document.querySelectorAll(selector);
-
-  for (let elem of elems) {
-    newFunc(elem);
-  }
+function takeSum(button, input1, input2, input3) {
+  button.addEventListener("click", function () {
+    let sum = +input1.value + +input2.value + +input3.value;
+    console.log(sum);
+  });
 }
 
-let i = 0;
-
-function func(item) {
-  i++;
-  item.textContent = i + " " + item.textContent;
-}
-
-forEach(".newPP", func);
-
-
+takeSum(button1, elem2, elem3, elem4);

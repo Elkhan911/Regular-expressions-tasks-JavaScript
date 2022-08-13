@@ -11,7 +11,7 @@
 
 .task__input {
   height: 30px;
-  margin: 100px 200px 100px 0;
+  margin: 100px 100px 100px 0;
 }
 
 .task__keys {
@@ -23,4 +23,9 @@
 .task__answer {
   display: inline;
   margin-right: 100px;
+}
+
+.button {
+  width: 100px;
+  height: 36px;
 }

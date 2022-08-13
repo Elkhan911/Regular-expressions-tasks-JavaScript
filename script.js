@@ -12,6 +12,9 @@ let taskAnswer21 = document.querySelector("#taskAnswer21");
 let taskAnswer22 = document.querySelector("#taskAnswer22");
 let buttton1 = document.querySelector("#button1");
 
+let input3 = document.querySelector("#input3");
+let taskAnswer31 = document.querySelector("#taskAnswer31");
+
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
@@ -28,8 +31,6 @@ input1.addEventListener("blur", function () {
     taskAnswer12.textContent =
       "Площадь квадрата:" + "  " + Number(input1.value) ** 2;
   }
-
-  console.log(typeof Number(input1.value));
 });
 
 buttton1.addEventListener("click", areaAndPerimeterRectangle);
@@ -46,9 +47,12 @@ function areaAndPerimeterRectangle() {
     taskAnswer21.textContent =
       "Периметр квадрата: " +
       (Number(inputLength.value) + Number(inputWidth.value)) * 2;
-    console.log(taskAnswer21);
     taskAnswer22.textContent =
       "Площадь квадрата: " + inputLength.value * inputWidth.value;
-    console.log(taskAnswer22);
   }
 }
+
+input3.addEventListener("blur", function () {
+  taskAnswer31.textContent =
+    "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
+});

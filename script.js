@@ -16,6 +16,12 @@ let input3 = document.querySelector("#input3");
 let taskAnswer31 = document.querySelector("#taskAnswer31");
 let taskAnswer32 = document.querySelector("#taskAnswer32");
 
+let input4A = document.querySelector("#input4A");
+let input4B = document.querySelector("#input4B");
+let input4C = document.querySelector("#input4C");
+let taskAnswer4 = document.querySelector("#taskAnswer4");
+let buttton2 = document.querySelector("#button2");
+
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
 //************************************************************************************************************** */
@@ -59,4 +65,20 @@ input3.addEventListener("blur", function () {
 
   taskAnswer32.textContent =
     "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
+});
+
+buttton2.addEventListener("click", function () {
+  let perimetr =
+    Number(input4A.value) + Number(input4B.value) + Number(input4C.value);
+
+  let halfPerimetr = perimetr / 2;
+
+  taskAnswer4.textContent =
+    "Плоащь треугольника " +
+    Math.sqrt(
+      halfPerimetr *
+        (halfPerimetr - Number(input4A.value)) *
+        (halfPerimetr - Number(input4B.value)) *
+        (halfPerimetr - Number(input4C.value))
+    );
 });

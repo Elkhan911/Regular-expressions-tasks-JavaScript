@@ -14,6 +14,7 @@ let buttton1 = document.querySelector("#button1");
 
 let input3 = document.querySelector("#input3");
 let taskAnswer31 = document.querySelector("#taskAnswer31");
+let taskAnswer32 = document.querySelector("#taskAnswer32");
 
 //************************************************************************************************************** */
 //******************************************** */ FUNCTIONS
@@ -55,4 +56,7 @@ function areaAndPerimeterRectangle() {
 input3.addEventListener("blur", function () {
   taskAnswer31.textContent =
     "Площадь круга:  " + ((Number(input3.value) ** 2 / 4) * Math.PI).toFixed(2);
+
+  taskAnswer32.textContent =
+    "Длина окружности: " + (Number(input3.value) * Math.PI).toFixed(2);
 });

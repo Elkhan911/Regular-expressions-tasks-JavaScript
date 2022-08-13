@@ -10,7 +10,12 @@
 
 .task__description {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+}
+
+.task__hints {
+  text-align: center;
+  margin: 5px 0 5px;
 }
 
 .task__input {

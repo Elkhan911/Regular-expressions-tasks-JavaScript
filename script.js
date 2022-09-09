@@ -125,3 +125,29 @@ console.log(res13);
 let str14 = "[abc] {abc} abc (abc) [abc]";
 let res14 = str14.replace(/\[abc\]/g, "!");
 console.log(res14);
+
+//********************  Фигурные скобки в регулярных выражения JavaScript  *********************************************
+
+// 15. Дана строка:
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// Напишите регулярку, которая найдет строки 'abba', 'abbba', 'abbbba' и только их.
+
+let str15 = "aa aba abba abbba abbbba abbbbba";
+let res15 = str15.match(/ab{2,4}a/g);
+console.log(res15);
+
+// 16. Дана строка:
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// Напишите регулярку, которая найдет строки вида 'aba', в которых 'b' встречается менее 3 - х раз(включительно).
+
+let str16 = "aa aba abba abbba abbbba abbbbba";
+let res16 = str16.match(/ab{1,3}a/g);
+console.log(res16);
+
+// 17. Дана строка:
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// Напишите регулярку, которая найдет строки вида 'aba', в которых 'b' встречается более 4-х раз (включительно).
+
+let str17 = "aa aba abba abbba abbbba abbbbba";
+let res17 = str17.match(/ab{4,}a/g);
+console.log(res17);

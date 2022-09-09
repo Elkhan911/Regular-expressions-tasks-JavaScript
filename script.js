@@ -114,6 +114,14 @@ console.log(res12);
 // let str = '*+ *q+ *qq+ *qqq+ *qqq qqq+';
 // Напишите регулярку, которая найдет строки '*q+', '*qq+', '*qqq+', не захватив остальные.
 
+let str13 = "*+ *q+ *qq+ *qqq+ *qqq qqq+";
+let res13 = str13.match(/\*q+\+/g);
+console.log(res13);
+
 // 14. Дана строка:
 // let str = '[abc] {abc} abc (abc) [abc]';
 // Напишите регулярку, которая найдет строки в квадратных скобках и заменят их на '!'.
+
+let str14 = "[abc] {abc} abc (abc) [abc]";
+let res14 = str14.replace(/\[abc\]/g, "!");
+console.log(res14);

@@ -202,6 +202,14 @@ console.log(res22);
 // Напишите регулярку, которая найдет строки следующего вида:
 // по краям стоят буквы 'a' и 'b', а между ними - не буква и не цифра.
 
+let str23 = "ave a##b a2b a$b a4b a5b a-b acb";
+let res23 = str23.match(/\a\W+\b/g);
+console.log(res23);
+
 // 24. Дана строка:
 // let str = 'ave a#a a2a a$a a4a a5a a-a aca';
 // Напишите регулярку, которая заменит все пробелы на '!'.
+
+let str24 = "ave a#a a2a a$a a4a a5a a-a aca";
+let res24 = str24.replace(/\s/g, "!");
+console.log(res24);

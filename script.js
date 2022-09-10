@@ -257,10 +257,18 @@ console.log(res28);
 // Напишите регулярку, которая найдет по следующему шаблону:
 // по краям стоят буквы 'a', а между ними - буква от a до f и от A до D.
 
+let str29 = "aAa aea aEa aJa a3a";
+let res29 = str29.match(/\a[a-fA-D]\a/g);
+console.log(res29);
+
 // 30. Дана строка:
 // let str = 'aAXa aeffa aGha aza ax23a a3sSa';
 // Напишите регулярку, которая найдет по следующему шаблону:
 // по краям стоят буквы 'a', а между ними - маленькие латинские буквы, не затронув остальных.
+
+let str30 = "aAXa aeffa aGha aza ax23a a3sSa";
+let res30 = str30.match(/\a[a-z]+\a/g);
+console.log(res30);
 
 // 31. Дана строка:
 // let str = 'aAXa aeffa aGha aza ax23a a3sSa';

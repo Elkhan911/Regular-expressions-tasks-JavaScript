@@ -388,3 +388,20 @@ console.log(res44);
 let str45 = "^xx axx ^zz bkk";
 let res45 = str45.match(/[^\^]\w{2}/g);
 console.log(res45);
+
+// ********************  Особенности дефиса внутри квадратных скобок  *******************************************
+// 46. Дана строка:
+// let str = 'xaz xBz xcz x-z x@z';
+// Найдите все строки по следующему шаблону: буква 'x', большая или маленькая буква или дефис, буква 'z'.
+
+let str46 = "xaz xBz xcz x-z x@z";
+let res46 = str46.match(/x[a-zA-Z\-]z/g);
+console.log(res46);
+
+// 47. Дана строка:
+// let str = 'xaz x$z x-z xcz x+z x%z x*z';
+// Найдите все строки по следующему шаблону: буква 'x', затем или доллар, или дефис или плюс, потом буква 'z'.
+
+let str47 = "xaz x$z x-z xcz x+z x%z x*z";
+let res47 = str47.match(/x[\$\-\+]z /g);
+console.log(res47);

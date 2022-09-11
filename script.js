@@ -203,7 +203,7 @@ console.log(res22);
 // по краям стоят буквы 'a' и 'b', а между ними - не буква и не цифра.
 
 let str23 = "ave a##b a2b a$b a4b a5b a-b acb";
-let res23 = str23.match(/\a\W+\b/g);
+let res23 = str23.match(/a\W+b/g);
 console.log(res23);
 
 // 24. Дана строка:
@@ -222,7 +222,7 @@ console.log(res24);
 // по краям стоят буквы 'a', а между ними - буква 'b', 'e' или 'x'.
 
 let str25 = "aba aea aca aza axa";
-let res25 = str25.match(/\a[bex]\a/g);
+let res25 = str25.match(/a[bex]a/g);
 console.log(res25);
 
 // 26. Дана строка:
@@ -231,7 +231,7 @@ console.log(res25);
 // по краям стоят буквы 'a', а между ними - цифра от 3 - х до 6 - ти.
 
 let str26 = "a1a a3a a7a a9a aba";
-let res26 = str26.match(/\a[3-6]\a/g);
+let res26 = str26.match(/a[3-6]a/g);
 console.log(res26);
 
 // 27. Дана строка:
@@ -240,7 +240,7 @@ console.log(res26);
 // по краям стоят буквы 'a', а между ними - буква от a до g.
 
 let str27 = "aba aea afa aha aga";
-let res27 = str27.match(/\a[a-g]\a/g);
+let res27 = str27.match(/a[a-g]a/g);
 console.log(res27);
 
 // 28. Дана строка:
@@ -249,7 +249,7 @@ console.log(res27);
 // по краям стоят буквы 'a', а между ними - буква от a до f и от j до z.
 
 let str28 = "aba aea afa aha aga aza";
-let res28 = str28.match(/\a[a-fj-z]\a/g);
+let res28 = str28.match(/a[a-fj-z]a/g);
 console.log(res28);
 
 // 29. Дана строка:
@@ -258,7 +258,7 @@ console.log(res28);
 // по краям стоят буквы 'a', а между ними - буква от a до f и от A до D.
 
 let str29 = "aAa aea aEa aJa a3a";
-let res29 = str29.match(/\a[a-fA-D]\a/g);
+let res29 = str29.match(/a[a-fA-D]a/g);
 console.log(res29);
 
 // 30. Дана строка:
@@ -267,7 +267,7 @@ console.log(res29);
 // по краям стоят буквы 'a', а между ними - маленькие латинские буквы, не затронув остальных.
 
 let str30 = "aAXa aeffa aGha aza ax23a a3sSa";
-let res30 = str30.match(/\a[a-z]+\a/g);
+let res30 = str30.match(/a[a-z]+a/g);
 console.log(res30);
 
 // 31. Дана строка:
@@ -276,7 +276,7 @@ console.log(res30);
 // по краям стоят буквы 'a', а между ними - маленькие и большие латинские буквы, не затронув остальных.
 
 let str31 = "aAXa aeffa aGha aza ax23a a3sSa";
-let res31 = str31.match(/\a[a-zA-Z]+\a/g);
+let res31 = str31.match(/a[a-zA-Z]+a/g);
 console.log(res31);
 
 // 32. Дана строка:
@@ -285,7 +285,7 @@ console.log(res31);
 // по краям стоят буквы 'a', а между ними - маленькие латинские буквы и цифры, не затронув остальных.
 
 let str32 = "aAXa aeffa aGha aza ax23a a3sSa";
-let res32 = str32.match(/\a[a-z0-9]+\a/g);
+let res32 = str32.match(/a[a-z0-9]+a/g);
 console.log(res32);
 
 // ********************  Инвертирование наборов символов в регулярках  ********************************************
@@ -301,14 +301,14 @@ console.log(res33);
 // затем НЕ цифра от 2 до 7, буква 'z'.
 
 let str34 = "aAXa aeffa aGha aza ax23a a3sSa x1z";
-let res34 = str34.match(/\x[^2-7]\z/g);
+let res34 = str34.match(/x[^2-7]z/g);
 console.log(res34);
 
 // 35. Напишите регулярку, которая найдет строки по шаблону: буква 'x',
 // затем НЕ большая латинская буква от 1 и более раз, буква 'z'.
 
 let str35 = "aAa aea aEa aJa a3a xwz x3545lklz";
-let res35 = str35.match(/\x[^A-Z]+?\z/g);
+let res35 = str35.match(/x[^A-Z]+?z/g);
 console.log(res35);
 
 // 36. Напишите регулярку, которая найдет строки по шаблону: буква 'x',
@@ -335,3 +335,31 @@ console.log(res37);
 let str38 = "ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ";
 let res38 = str38.match(/[А-я]+/g);
 console.log(res38);
+
+// 39. Напишите регулярку, которая найдет строки по шаблону: цифра или точка от 1 и более раз.
+let str39 = "1.1.1 wяw wёw wqw 1111 .....";
+let res39 = str39.match(/[\d.]+/g);
+console.log(res39);
+
+// 40. Напишите регулярку, которая найдет строки по шаблону: не цифра и не буква от 'a' до 'g' от 3 до 7 раз.
+let str40 = "wйw wяw wёw wqw 125 a87 z85";
+let res40 = str40.match(/[^\da-gA-G]{3,7}/g);
+console.log(res40);
+
+// ********************  Спецсимволы-исключения внутри квадратных скобок  *******************************************
+// 41. Дана строка:
+// let str = 'x[]z x{}z x.z x()z';
+// Напишите регулярку, которая найдет все слова по шаблону: буква 'x',
+// затем любое количество любых квадратных скобок, затем буква 'z'.
+
+let str41 = "x[]z x{}z x.z x()z";
+let res41 = str41.match(/x[\[\]]+z/g);
+console.log(res41);
+
+// 42. Дана строка:
+// let str = '[abc] {abc} abc (abc) [abc]';
+// Напишите регулярку, которая найдет строки в квадратных скобках и заменят их на '!'.
+
+let str42 = "[abc] {abc} abc (abc) [abc]";
+let res42 = str42.replace(/\[abc\]+/g, "!");
+console.log(res42);

@@ -482,9 +482,31 @@ let res59 = /\d{1,2}:\d{1,2}:\d{1,2}/.test("00:36:59");
 console.log(res59);
 
 // 60. Определите, является ли переданная строка корректным емэйлом.
-let res60 = /[a-z]{1,}@\w+\.[a-z]{2,4}/.test("yes@gmail.ru");
+let res60 = /[a-z]{1,}@\w+\.[a-z]{2,4}$/.test("yes@gmail.ru");
 console.log(res60);
 
 // 61. Определите, является ли переданная строка доменным именем.
-let res61 = /[a-z]+\.(ru|рф|com|net|ua|us)/.test("yandex.ru");
+let res61 = /[a-z]+\.(ru|рф|com|net|ua|us)$/.test("yandex.ru");
 console.log(res61);
+
+// 62. Дана строка:
+// let str = 'site.ru sss site.com zzz site.net';
+// Получите массив доменных имен из этой строки.
+
+let str62 = "site.ru sss site.com zzz site.net";
+let res62 = str62.match(/[a-z]+\.(ru|net|com)/g);
+console.log(res62);
+
+// 63. Дана строка:
+// let str = 'a1b c34d x567z';
+// Найдите сумму всех чисел этой строки.
+
+let str63 = "a1b c100d x100z";
+let res63 = str63.match(/\d+/g);
+console.log(res63);
+
+let result63 = 0;
+for (let elem of res63) {
+  result63 += Number(elem);
+}
+console.log(result63);

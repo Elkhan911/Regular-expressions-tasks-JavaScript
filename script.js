@@ -423,3 +423,23 @@ console.log(res48);
 let str49 = "abc def xyz";
 let res49 = str49.match(/[a-zA-Z]$/g);
 console.log(res49);
+
+// ********************  Команда 'или' в регулярных выражениях JavaScript   *******************************************
+
+// 50. Дана строка:
+// let str = 'aeeea aeea aea axa axxa axxxa';
+// Напишите регулярку, которая найдет строки по шаблону: по краям стоят буквы 'a',
+// а между ними - или буква 'e' любое количество раз или буква 'x' любое количество раз.
+
+let str50 = "aeeea aeea aea axa axxa axxxa";
+let res50 = str50.match(/a(e+|x+)a/g);
+console.log(res50);
+
+// 51. Дана строка:
+// let str = 'aeeea aeea aea axa axxa axxxa';
+// Напишите регулярку, которая найдет строки по шаблону: по краям стоят буквы 'a',
+// а между ними - или буква 'e' два раза или буква 'x' любое количество раз.
+
+let str51 = "aeeea aeea aea axa axxa axxxa";
+let res51 = str51.match(/a(e{2}|x+)a/g);
+console.log(res51);

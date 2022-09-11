@@ -405,3 +405,21 @@ console.log(res46);
 let str47 = "xaz x$z x-z xcz x+z x%z x*z";
 let res47 = str47.match(/x[\$\-\+]z /g);
 console.log(res47);
+
+// ********************  Начало и конец строки в регулярках   *******************************************
+
+// 48. Дана строка:
+// let str = 'abc def xyz';
+// Напишите регулярку, которая найдет первую подстроку из букв.
+
+let str48 = "abc def xyz 1ac";
+let res48 = str48.match(/^[a-zA-Z]/g);
+console.log(res48);
+
+// 49. Дана строка:
+// let str = 'abc def xyz';
+// Напишите регулярку, которая найдет последнюю подстроку из букв.
+
+let str49 = "abc def xyz";
+let res49 = str49.match(/[a-zA-Z]$/g);
+console.log(res49);
